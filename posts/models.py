@@ -4,10 +4,29 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     """
-    Post model, related to 'owner', i.e. a User instance.
-    Default image set so that we can always reference image.url.
-    Model created following CI walkthrough.
+    Post model created following CI walkthrough.
     """
+    image_filter_choices = [
+        ('NO_FILTER', 'no filter'),
+        ('COLORIZED', 'colorized'),
+        ('GRAYSCALE', 'grayscale'),
+        ('BLURRED', 'blurred'),
+        ('BINARY', 'binary'),
+        ('INVERT', 'invert'),
+        ('earlybird', 'Earlybird'),
+        ('hudson', 'Hudson'),
+        ('inkwell', 'Inkwell'),
+        ('lofi', 'Lo-Fi'),
+        ('kelvin', 'Kelvin'),
+        ('normal', 'Normal'),
+        ('nashville', 'Nashville'),
+        ('rise', 'Rise'),
+        ('toaster', 'Toaster'),
+        ('valencia', 'Valencia'),
+        ('walden', 'Walden'),
+        ('xpro2', 'X-pro II'),
+    ]
+
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -15,6 +34,9 @@ class Post(models.Model):
     content = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_profile_o1d4g4', blank=True
+    )
+    image_filter = models.CharField(
+        max_length=32, choices=image_filter_choices, default='normal'
     )
 
     class Meta:
