@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('reply.urls')),
     path('', include('votes.urls')),
     path('', include('downvotes.urls')),
+    path('', include('followers.urls')),
 ]
