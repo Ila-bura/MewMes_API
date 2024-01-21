@@ -36,8 +36,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com',
-                 'https://mewmes-dc42376a8874.herokuapp.com/']
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOST'],
+'8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com',
+                 'https://mewmes-dc42376a8874.herokuapp.com/', ]
 
 
 # Application definition
