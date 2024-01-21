@@ -3,6 +3,7 @@ from MewMes_API.permissions import IsOwnerOrReadOnly
 from votes.models import Vote
 from votes.serializers import VoteSerializer
 
+
 class VoteList(generics.ListCreateAPIView):
     """
     List votes or create a vote if logged in.

@@ -15,6 +15,7 @@ class DownVoteList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
+
 class DownVoteDetail(generics.RetrieveDestroyAPIView):
     """
     Retrieve a downvote or delete it by id if you own it.

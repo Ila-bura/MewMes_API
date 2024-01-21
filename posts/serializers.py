@@ -11,6 +11,9 @@ class PostSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     vote_id = serializers.SerializerMethodField()
     downvote_id = serializers.SerializerMethodField()
+    reply_count = serializers.ReadOnlyField()
+    votes_count = serializers.ReadOnlyField()
+    downvotes_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -24,7 +27,7 @@ class PostSerializer(serializers.ModelSerializer):
                 'Image width larger than 4096px!'
             )
         return value
-    
+
     def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner
@@ -52,6 +55,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'profile_id',
             'profile_image', 'created_at', 'updated_at',
-            'title', 'content', 'image', 'image_filter', 
-            'vote_id', 'downvote_id',
+            'title', 'content', 'image', 'image_filter',
+            'vote_id', 'downvote_id', 'reply_count', 'votes_count',
+            'downvotes_count',
         ]

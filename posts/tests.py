@@ -8,27 +8,30 @@ class PostListViewTests(APITestCase):
     def setUp(self):
         User.objects.create_user(username='ila', password='pass')
 
+
 def test_can_list_posts(self):
-        """Test if a user can list posts"""
-        jody = User.objects.get(username='ila')
-        Post.objects.create(owner=ila, title='a title')
-        response = self.client.get('/posts/')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        print(response.data)
-        print(len(response.data))
+    """Test if a user can list posts"""
+    jody = User.objects.get(username='ila')
+    Post.objects.create(owner=ila, title='a title')
+    response = self.client.get('/posts/')
+    self.assertEqual(response.status_code, status.HTTP_200_OK)
+    print(response.data)
+    print(len(response.data))
+
 
 def test_logged_in_user_can_create_post(self):
-        """Test if logged in user can create a post"""
-        self.client.login(username='ila', password='pass')
-        response = self.client.post('/posts/', {'title': 'a title'})
-        count = Post.objects.count()
-        self.assertEqual(count, 1)
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+    """Test if logged in user can create a post"""
+    self.client.login(username='ila', password='pass')
+    response = self.client.post('/posts/', {'title': 'a title'})
+    count = Post.objects.count()
+    self.assertEqual(count, 1)
+    self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
 
 def test_user_not_logged_in_cant_create_post(self):
-        """Test if a logged out user cannot create a post"""
-        response = self.client.post('/posts/', {'title': 'a title'})
-        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+    """Test if a logged out user cannot create a post"""
+    response = self.client.post('/posts/', {'title': 'a title'})
+    self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
 
 class PostDetailViewTests(APITestCase):

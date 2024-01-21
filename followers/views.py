@@ -3,6 +3,7 @@ from MewMes_API.permissions import IsOwnerOrReadOnly
 from .models import Follower
 from .serializers import FollowerSerializer
 
+
 class FollowerList(generics.ListCreateAPIView):
     """
     List all instances of a user following another user.

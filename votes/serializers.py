@@ -2,6 +2,7 @@ from django.db import IntegrityError
 from rest_framework import serializers
 from votes.models import Vote
 
+
 class VoteSerializer(serializers.ModelSerializer):
     """
     Serializer for the Vote model

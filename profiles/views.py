@@ -30,6 +30,7 @@ class ProfileList(generics.ListAPIView):
         'owner__followed__created_at',
     ]
 
+
 class ProfileDetail(generics.RetrieveUpdateAPIView):
     """
     Owners can retrieve or update their profile.
