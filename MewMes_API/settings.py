@@ -39,7 +39,7 @@ DEBUG = 'True'
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     '8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com',
-    'https://mewmes-dc42376a8874.herokuapp.com/'
+    'https://mewmes-dc42376a8874.herokuapp.com/', 'mewmes-dc42376a8874.herokuapp.com'
 ]
 
 
