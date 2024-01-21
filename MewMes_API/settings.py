@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'votes',
     'downvotes',
     'followers',
+    'saved',
 ]
 
 MIDDLEWARE = [
