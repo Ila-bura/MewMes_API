@@ -1,6 +1,6 @@
 # **MewMes - API**
 
-MewMes is a content-sharing platform where cat lovers can sign up and share their favourite cat memes.
+MewMes is a content-sharing platform designed for cat memes appreciators: users can sign up and share their favourite cat memes.
 The app includes registration and sign-up, users can add posts, react to posts, follow or unfollow another user, vote or downvote memes, as well as save posts for future viewing.
 
 #### Deployed Backend API Render [Link](https://8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com/)
@@ -40,39 +40,31 @@ The app includes registration and sign-up, users can add posts, react to posts, 
 
 ## **User Stories**
 
-All User Stories have been documented in their own file, the link for which can be found [HERE](static/user-stories.md).
-
-The [GitHub Issues]() and the [Kanban board]() can be found clicking on these links.
+The User Stories and GitHub Issues can be found [HERE](https://github.com/users/Ila-bura/projects/22) for both frontend and backend tasks.
 
 ## **Testing**
 
 ### **Unit Testing**
 
+* The following tests were created following the CI walkthrough.
+The command *python manage.py test* was used. All tests passed.
+
 #### **Posts List View testing:**
 
-* The following tests were created following the CI walkthrough and using the command:
-
-    *python manage.py test*
-
-![screenshot]()
-![screenshot]()
-
-All tests passed.
+![screenshot](static/images-readme/postlistview-test-1.png)
+![screenshot](static/images-readme/postlistview-test-2.png)
+![screenshot](static/images-readme/postlistview-test-3.png)
 
 #### **Posts Detail View testing:**
 
-* The following tests were created following the CI walkthrough and using the command:
-
-    *python manage.py test*
-
-![screenshot]()
-![screenshot]()
-
-All tests passed.
+![screenshot](static/images-readme/postdetailview-test-1.png)
+![screenshot](static/images-readme/postdetailview-test-2.png)
+![screenshot](static/images-readme/postdetailview-test-3.png)
+![screenshot](static/images-readme/postdetailview-test-3.png)
 
 ### **Validators**
 
-* All code passes through the built-in package, similar to PEP8 checker, and was continuously checked throughout the production of this API.
+All the Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp.com/) with no issues found.
 
 ### **Manual Testing**
 
@@ -110,21 +102,21 @@ All tests passed.
 
 ## **Technologies Used**
 
-### **Languages**
+### **Main Language**
 
 * Python
-* Django
-* Django Rest Framework
 
 ### **Libraries, Frameworks, and Programs**
 
-* Cloudinary Storage
-* Django rest auth
-* Postgre SQL
+* Django
+* Django RestFramework
+* Cloudinary
+* Heroku
+* Django Rest Auth
+* PostgreSQL
 * Pillow
-* Django rest framework
-* QuickBaseDiagrams (for the database schema diagram)
 * Django Cors Headers
+* QuickBaseDiagrams: for the database schema diagram
 
 ## **Bugs**
 ### **Unresolved**
