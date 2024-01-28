@@ -39,7 +39,8 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    'local host',
+    '8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com',
+    'mewmes-dc42376a8874.herokuapp.com'
 ]
 
 # Application definition
