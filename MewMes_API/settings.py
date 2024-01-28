@@ -111,6 +111,16 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'https://3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com',
+    'https://mewmes-dc42376a8874.herokuapp.com'
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r'^https://\d+-ila-bura-mewmes-td0juo0b6f\.us2\.codeanyapp\.com$',
+    r'^https://mewmes-dc42376a8874\.herokuapp\.com$'
+]
+
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
