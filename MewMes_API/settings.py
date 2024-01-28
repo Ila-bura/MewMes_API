@@ -112,8 +112,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get('CLIENT_ORIGIN'),
-    os.environ.get('CLIENT_ORIGIN_DEV'),
+    os.environ.get('https://mewmes-ila-3228af34fcea.herokuapp.com'),
+    os.environ.get(
+        'https://3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com'),
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
