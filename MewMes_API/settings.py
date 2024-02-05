@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
     '8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com',
     'mewmes-dc42376a8874.herokuapp.com',
     '3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com',
-    'https://mewmes-ila-3228af34fcea.herokuapp.com',
+    'mewmes-ila-3228af34fcea.herokuapp.com',
 ]
 
 # Application definition
