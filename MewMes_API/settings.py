@@ -140,12 +140,6 @@ CORS_ALLOW_METHODS = [
     'OPTIONS',
 ]
 
-CORS_ALLOW_HEADERS = [
-    'Content-Type',
-    'Authorization',
-    'X-Requested-With',
-]
-
 CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'MewMes_API.urls'
 
