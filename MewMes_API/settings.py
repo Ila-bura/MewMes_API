@@ -126,8 +126,8 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
     ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com/',
-    'https://mewmes-ila-3228af34fcea.herokuapp.com/'
+    'https://3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com',
+    'https://mewmes-ila-3228af34fcea.herokuapp.com'
 ]
 
 # Optional: Set other CORS headers as needed
