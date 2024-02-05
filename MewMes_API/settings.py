@@ -125,6 +125,26 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
 
+CORS_ALLOWED_ORIGINS = [
+    'https://3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com/',
+    'https://mewmes-ila-3228af34fcea.herokuapp.com/'
+]
+
+# Optional: Set other CORS headers as needed
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'OPTIONS',
+]
+
+CORS_ALLOW_HEADERS = [
+    'Content-Type',
+    'Authorization',
+    'X-Requested-With',
+]
+
 CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'MewMes_API.urls'
 
