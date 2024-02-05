@@ -41,7 +41,8 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     '8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com',
     'mewmes-dc42376a8874.herokuapp.com',
-    '3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com'
+    '3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com',
+    'https://mewmes-ila-3228af34fcea.herokuapp.com',
 ]
 
 # Application definition
@@ -110,12 +111,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
-
-CORS_ALLOWED_ORIGINS = [
-    'https://3000-ila-bura-mewmes-td0juo0b6f.us2.codeanyapp.com',
-    'https://mewmes-dc42376a8874.herokuapp.com',
-    'https://mewmes-ila-3228af34fcea.herokuapp.com',
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
