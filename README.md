@@ -148,31 +148,31 @@ Below are some test cases that were implemented throughout development to check 
 #### **Testing with Admin credentials**
 
 <details><summary>Profiles</summary>
-<img src="readme/admin_profiles.png" >
+<img src="static/images-readme/admin_profiles.png" >
 </details>
 
 <details><summary>Posts</summary>
-<img src="readme/admin_posts.png" >
+<img src="static/images-readme/admin_posts.png" >
 </details>
 
 <details><summary>Reply</summary>
-<img src="readme/admin_reply.png" >
+<img src="static/images-readme/admin_reply.png" >
 </details>
 
 <details><summary>Followers</summary>
-<img src="readme/admin_followers.png" >
+<img src="static/images-readme/admin_followers.png" >
 </details>
 
 <details><summary>Saved</summary>
-<img src="readme/admin_saved.png" >
+<img src="static/images-readme/admin_saved.png" >
 </details>
 
 <details><summary>Votes</summary>
-<img src="readme/admin_votes.png" >
+<img src="static/images-readme/admin_votes.png" >
 </details>
 
 <details><summary>Downvotes</summary>
-<img src="readme/admin_downvotes.png" >
+<img src="static/images-readme/admin_downvotes.png" >
 </details>
 
 ### **Integration Testing**
