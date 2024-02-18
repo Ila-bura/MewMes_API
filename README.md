@@ -32,8 +32,9 @@ The app includes registration and sign-up, users can add memes, react to memes, 
 
 ## **Database Schema**
 
-The plan for this project was loosely based on the Code Institute Moments walkthrough project. 
-Most of the models are similar except for the Saved model, which has been customised to better suit the needs of MewMes app users. The Votes and Downvotes models were also added.
+- The plan for this project was loosely based on the Code Institute Moments walkthrough project. 
+- Most of the models are similar except for the Saved model, which has been customised to better suit the needs of MewMes app users.
+- The Votes and Downvotes models were also added to serve the purposes of MewMes app.
 
 ![screenshot](static/images-readme/database-schema.png)
 
