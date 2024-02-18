@@ -1,13 +1,12 @@
 # **MewMes - API**
 
 MewMes is a content-sharing platform designed for cat memes appreciators: users can sign up and share their favourite cat memes.
-The app includes registration and sign-up, users can add posts, react to posts, follow or unfollow another user, vote or downvote memes, as well as save posts for future viewing.
+The app includes registration and sign-up, users can add memes, react to memes, follow or unfollow another user, react to memes, as well as save memes for future viewing.
 
-#### Deployed Backend API Render [Link](https://8000-ila-bura-mewmes-api-kn3tcknz09.us2.codeanyapp.com/)
+- [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
+- [MewMes Deployed Back-End Page](https://mewmes-dc42376a8874.herokuapp.com/)
+- [Front-End repository](https://github.com/Ila-bura/MewMes_API)
 
-#### Deployed Frontend Render [Link - Live Site]()
-
-#### Deployed Frontend [Repository]()
 
 ## **Table of Contents** ##
 
@@ -68,10 +67,10 @@ All the Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp
 
 ### **Manual Testing**
 
-#### **Testing CRUD functionality in the apps:**
+#### **Testing CRUD functionality throughout the apps:**
 
 | App | Create | Read | Update | Delete | Result
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | Posts | Pass | Pass| Pass | Pass |
 | Profiles | n/a | Pass | Pass | n/a |
 | Reply | Pass | Pass | Pass | Pass |
@@ -99,6 +98,36 @@ All the Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp
 | /votes/:id/ | Pass |
 | /downvotes/ | Pass |
 | /downvotes/:id/ | Pass |
+
+#### **Testing with Admin credentials**
+
+<details><summary>Profiles</summary>
+<img src="readme/admin_profiles.png" >
+</details>
+
+<details><summary>Posts</summary>
+<img src="readme/admin_posts.png" >
+</details>
+
+<details><summary>Reply</summary>
+<img src="readme/admin_reply.png" >
+</details>
+
+<details><summary>Followers</summary>
+<img src="readme/admin_followers.png" >
+</details>
+
+<details><summary>Saved</summary>
+<img src="readme/admin_saved.png" >
+</details>
+
+<details><summary>Votes</summary>
+<img src="readme/admin_votes.png" >
+</details>
+
+<details><summary>Downvotes</summary>
+<img src="readme/admin_downvotes.png" >
+</details>
 
 ## **Technologies Used**
 
