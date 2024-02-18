@@ -181,21 +181,66 @@ The MewMes API has also gone through integration testing via testing the feature
   
 ## **Technologies Used**
 
-### **Main Language**
+### **Main Languages**
 
-* Python
+- [Python](https://www.python.org/) 
 
-### **Libraries, Frameworks, and Programs**
+- [HTML](https://www.w3schools.com/html/html_intro.asp)
 
-* Django
-* Django RestFramework
-* Cloudinary
-* Heroku
-* Django Rest Auth
-* PostgreSQL
-* Pillow
-* Django Cors Headers
-* QuickBaseDiagrams: for the database schema diagram
+- [CSS](https://www.w3schools.com/css/css_intro.asp)
+
+- [JS](https://reactjs.org/)
+
+### **Databases**
+- [PostgreSQL](https://www.postgresql.org/)
+- 
+### **Cloud storage and deployment services**
+- [Cloudinary](https://cloudinary.com/)
+    - Used to store media files and images.
+- [Heroku](https://www.heroku.com/)
+    - Used to host the deployed sitewhat
+- [ElephantSQL]() 
+   - Used to host and operate the PostgresSQL database
+
+### **Frameworks, tools and libraries**
+#### API Back-End
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+    - The frmaework used to build the api
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+   - PostgreSQL database adapter for python
+- [django_filters](https://django-filter.readthedocs.io/en/stable/guide/install.html) 
+    - Provides filtering capabilities for Django querysets in the API views.
+    - In the frontend UI, this will allow users to search with keywords to find relevant content. 
+- [dj_rest_auth](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+    - Extends Django REST Framework's authentication and provides authentication views.
+- [rest_framework.authtoken](https://pypi.org/project/django-rest-authtoken/)
+    - Provides token-based authentication for the REST Framework.
+- [dj_rest_auth.registration](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+    - Handles user registration views and functionality for dj-rest-auth.
+- [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+    - Provides user authentication, registration, and account management functionalities.
+- [corsheaders](https://pypi.org/project/django-cors-headers/)
+    - Handles Cross-Origin Resource Sharing (CORS) headers for handling requests from different origins.
+- [JSON WEB tokens](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html)
+    - Authenticates requests through a JSON web token provided in a request header.
+    - ManageS account authorisation, keep user logged-in for 24 hours.
+- [dbdiagram.io](https://dbdiagram.io/home): for the database schema diagram.
+
+### **Installed Libraries and packages**
+The following libraries and packages were installed using the pip3 install command:
+```
+'django<4'
+dj3-cloudinary-storage
+Pillow
+djangorestframework
+django-filter
+dj-rest-auth
+'dj-rest-auth[with_social]'
+djangorestframework-simplejwt
+dj_database_url psycopg2
+gunicorn
+django-cors-headers
+```
 
 ## **Bugs**
 ### **Unresolved**
@@ -490,16 +535,38 @@ The first step of deployment is setting up the JWT tokens:
 
 - Then add to "INSTALLED_APPS" section in settings.py:
 
-    ```
+```
     INSTALLED_APPS = [
-    ...
-    'dj_rest_auth.registration',
-    'corsheaders',
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'cloudinary_storage',
+        'django.contrib.staticfiles',
+        'cloudinary',
+        'rest_framework',
+        'django_filters',
+        'rest_framework.authtoken',
+        'dj_rest_auth',
+        'django.contrib.sites',
+        'allauth',
+        'allauth.account',
+        'allauth.socialaccount',
+        'dj_rest_auth.registration',
+        'corsheaders',
 
-    'profiles',
-    ...
+        'profiles',
+        'posts',
+        'reply',
+        'saved',
+        'followers',
+        'votes',
+        'downvotes',    
+
     ]
-    ```
+
+```
 
 * Add to MIDDLEWARE  list: (place at the top of the MIDDLEWARE list)
 
@@ -572,14 +639,14 @@ The first step of deployment is setting up the JWT tokens:
 5. Open the terminal of your IDE and change the current working directory to the location you want to use for the cloned directory.
 6. Type the git clone command followed by the link you copied in step 4.
 7. Set up your virtual environement and install the packages from requirements.txt.
-    - To install packages type the following command into the terminal: pip3 install -r requirements.txt
+8. To install packages type the following command into the terminal: pip3 install -r requirements.txt
 
 ## **Credits**
 
 ### **Sources**
 
-- The DRF API walkthrough from Code Institue was followed as a guide to set up the API for this project.
-- [Stack Overflow](https://stackoverflow.com/)
+This project is a variation and largely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/drf-api/tree/ed54af9450e64d71bc4ecf16af0c35d00829a106) walkthrough project.
+It contains models and logic from that project which have bee modified for the purpose of MewMes cat memes sharing app.
 
 ### **Acknowledgments**
 
