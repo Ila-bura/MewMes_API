@@ -1,44 +1,69 @@
 # **MewMes - API**
 
+This is the backend API for the MewMes Frontend React app. It contains the models and logic to allow the frontend application to perform CRUD operations.
 MewMes is a content-sharing platform designed for cat memes appreciators: users can sign up and share their favourite cat memes.
 The app includes registration and sign-up, users can add memes, react to memes, follow or unfollow another user, react to memes, as well as save memes for future viewing.
 
-- [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
 - [MewMes Deployed Back-End Page](https://mewmes-dc42376a8874.herokuapp.com/)
+- [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
 - [Front-End repository](https://github.com/Ila-bura/MewMes_API)
 
 
 ## **Table of Contents** ##
     
-  - [**Table of Contents**](#table-of-contents)
-  - [**Database Schema**](#database-schema)
-  - [**User Stories**](#user-stories)
-  - [**Testing**](#testing)
-    - [**Unit Testing**](#unit-testing)
-      - [**Posts List View testing:**](#posts-list-view-testing)
-      - [**Posts Detail View testing:**](#posts-detail-view-testing)
-    - [**Validators**](#validators)
-    - [**Manual Testing**](#manual-testing)
-      - [**Testing CRUD functionality in the apps:**](#testing-crud-functionality-in-the-apps)
-      - [**Testing URLs**](#testing-urls)
-  - [**Technologies Used**](#technologies-used)
-    - [**Languages**](#languages)
-    - [**Libraries, Frameworks, and Programs**](#libraries-frameworks-and-programs)
-  - [**Bugs**](#bugs)
-    - [**Unresolved**](#unresolved)
+  - [Table of Contents](#table-of-contents)
+  - [Database Schema](#database-schema)
+  - [User Stories](#user-stories)
+  - [Testing](#testing)
+    - [Unit Testing](#unit-testing)
+      - [Posts List View testing:](#posts-list-view-testing)
+      - [Posts Detail View testing:](#posts-detail-view-testing)
+    - [Code Validation](#validation)
+    - [Manual Testing](#manual-testing)
+      - [Testing CRUD functionality:](#testing-crud-functionality)
+      - [Testing URLs](#testing-urls)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Libraries, Frameworks, and Programs](#libraries-frameworks-and-programs)
+  - [Bugs](#bugs)
+    - [Unresolved](#unresolved)
 
 ------------------------------------------------------------------------------------------------------------
 
 ## **Database Schema**
 
-The plan for this project is loosely based on the Code Institute Moments walkthrough project. 
+The plan for this project was loosely based on the Code Institute Moments walkthrough project. 
 Most of the models are similar except for the Saved model, which has been customised to better suit the needs of MewMes app users. The Votes and Downvotes models were also added.
 
 ![screenshot](static/images-readme/database-schema.png)
 
+## **API Endpoints**
+```
+/
+dj-rest-auth/login/
+dj-rest-auth/logout/
+dj-rest-auth/registration/
+dj-rest-auth/password/change/
+dj-rest-auth/token/refresh/
+profiles/
+profiles/<int:pk>/
+posts/
+posts/<int:pk>/
+reply/
+reply/<int:pk>/
+saved/
+saved/<int:pk>/
+followers/
+followers/<int:pk>/
+votes/
+votes/<int:pk>/
+downvotes/
+downvotes/<int:pk>/
+```
+
 ## **User Stories**
 
-The User Stories and GitHub Issues can be found [HERE](https://github.com/users/Ila-bura/projects/22) for both frontend and backend tasks.
+This project was designed using agile methodologies. User stories and unresolved bugs are recorded on the [Project Board](https://github.com/users/Ila-bura/projects/22) for both frontend and backend tasks.
 
 ## **Testing**
 
@@ -62,12 +87,12 @@ The command *python manage.py test* was used. All tests passed.
 
 ### **Code Validation**
 
-- The python code was monitored for errors and adjusted throughout development using the gitpod IDE problems tab.
-- All python files were opened one by one and any problems were manually corrected: mainly minor issues such as blank line at end of file.
+- The Python code was monitored for errors and adjusted throughout development using the gitpod IDE problems tab.
+- All Python files were opened one by one and any problems were manually corrected: mainly minor issues such as blank line at end of file.
 - The only issues left unfixed from the problems tab are the line too long warnings from the automatically generated settings.py AUTH_PASSWORD_VALIDATORS variable which contains long strings. 
 These strings were left intact rather than breaking them up into smaller strings for the sake of avoiding potential issues. This seems to be the general consensus by reseraching the matter on the Code Institute Slack channels.
 
-All the Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp.com/) with no issues found.
+All Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp.com/) with no issues found.
 
 ### **Manual Testing**
 
