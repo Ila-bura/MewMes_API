@@ -9,11 +9,7 @@ The app includes registration and sign-up, users can add memes, react to memes, 
 
 
 ## **Table of Contents** ##
-
-- [**MewMes - API**](#mewmes---api)
-      - [Deployed Backend API Render Link](#deployed-backend-api-render-link)
-      - [Deployed Frontend Render Link - Live Site](#deployed-frontend-render-link---live-site)
-      - [Deployed Frontend Repository](#deployed-frontend-repository)
+    
   - [**Table of Contents**](#table-of-contents)
   - [**Database Schema**](#database-schema)
   - [**User Stories**](#user-stories)
@@ -34,6 +30,9 @@ The app includes registration and sign-up, users can add memes, react to memes, 
 ------------------------------------------------------------------------------------------------------------
 
 ## **Database Schema**
+
+The plan for this project is loosely based on the Code Institute Moments walkthrough project. 
+Most of the models are similar except for the Saved model, which has been customised to better suit the needs of MewMes app users. The Votes and Downvotes models were also added.
 
 ![screenshot](static/images-readme/database-schema.png)
 
@@ -61,16 +60,37 @@ The command *python manage.py test* was used. All tests passed.
 ![screenshot](static/images-readme/postdetailview-test-3.png)
 ![screenshot](static/images-readme/postdetailview-test-3.png)
 
-### **Validators**
+### **Code Validation**
+
+- The python code was monitored for errors and adjusted throughout development using the gitpod IDE problems tab.
+- All python files were opened one by one and any problems were manually corrected: mainly minor issues such as blank line at end of file.
+- The only issues left unfixed from the problems tab are the line too long warnings from the automatically generated settings.py AUTH_PASSWORD_VALIDATORS variable which contains long strings. 
+These strings were left intact rather than breaking them up into smaller strings for the sake of avoiding potential issues. This seems to be the general consensus by reseraching the matter on the Code Institute Slack channels.
 
 All the Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp.com/) with no issues found.
 
 ### **Manual Testing**
 
+- The MewMes API was tested manually throughout development using Django REST framework. 
+- API Endpoints and CRUD functionality was tested for each feature. 
+- The API endpoints were also checked in the deployed site to see if they were working and checked throughout the frontend development to ensure front and backend integration as each feature was being built in the React app.
+
+### **Test cases**
+Below are some test cases that were implemented throughout development to check correct functionality: 
+- Check login, logout and registration functionality.
+- Check that access to memes, reply, profiles, followers, votes and downvotes POST, PUT and DELETE Metods are restricted to authorised users. 
+- Get methods are checked via api endpoints.
+- Filter function was checked using keywords.
+- POST method was tested for Posts, reply, saved, votes, downvotes and followers
+- POST method for dj-rest-auth/registration/ to create a profile tested
+- POST method for /dj-rest-auth/password/change/ to change password tested
+- PUT mehtod for profiles/id, posts/id and reply/id tested
+- DELETE method for posts/id, reply/id, saved/id, votes/id, downvotes/id, followers/id tested
+
 #### **Testing CRUD functionality throughout the apps:**
 
-| App | Create | Read | Update | Delete | Result
-|---|---|---|---|---|---|
+| App | Create | Read | Update | Delete |
+|---|---|---|---|---|
 | Posts | Pass | Pass| Pass | Pass |
 | Profiles | n/a | Pass | Pass | n/a |
 | Reply | Pass | Pass | Pass | Pass |
@@ -129,6 +149,11 @@ All the Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp
 <img src="readme/admin_downvotes.png" >
 </details>
 
+### **Integration Testing**
+The MewMes API has also gone through integration testing via testing the features on the frontend site. 
+- The Testing documentation can be found [here](https://github.com/Ila-bura/mewmes/blob/main/README.md#testing).
+- Bugs encountered during this process were frontend bugs. See more details [here](https://github.com/Ila-bura/mewmes/blob/main/README.md#bugs).
+  
 ## **Technologies Used**
 
 ### **Main Language**
@@ -351,7 +376,7 @@ The first step of deployment is setting up the JWT tokens:
     }
     ```
 
-### **Date and time formatting - Comments and Post:**
+### **Date and time formatting - Reply and Post:**
 
 - In the reply app, create the serializers.py app. Then set the imports up in the file:
 
@@ -506,6 +531,23 @@ The first step of deployment is setting up the JWT tokens:
 - Back in Heroku in the deploy tab: Select the Deployment Method (GitHub), select the project repository name from Github, and connect. Next in the Manual deploy section, choose the Master Branch, then click Deploy Branch.
 
 - Once complete, click "Open App" to view.
+
+### **Steps to Fork the repository**
+
+1. Log in to GitHub.
+2. Go to the repository [MewMes_API](https://github.com/Ila-bura/MewMes_API).
+3. Click the Fork button in the top right hand corner.
+4. A copy of the repo will be available in your GitHub repositories list
+
+#### **Steps to clone the repository**
+1. Log in to GitHub.
+2. Go to the repository [MewMes_API](https://github.com/Ila-bura/MewMes_API).
+3. Click on the green code button next to the green gitpod button.
+4. Select how you would like to clone, ie. with HTTPS, SSH or GitHub CLI, and copy the link provided.
+5. Open the terminal of your IDE and change the current working directory to the location you want to use for the cloned directory.
+6. Type the git clone command followed by the link you copied in step 4.
+7. Set up your virtual environement and install the packages from requirements.txt.
+    - To install packages type the following command into the terminal: pip3 install -r requirements.txt
 
 ## **Credits**
 
