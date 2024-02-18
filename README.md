@@ -1,8 +1,8 @@
 # **MewMes - API**
 
-This is the backend API for the MewMes Frontend React app. It contains the models and logic to allow the frontend application to perform CRUD operations.
-MewMes is a content-sharing platform designed for cat memes appreciators: users can sign up and share their favourite cat memes.
-The app includes registration and sign-up, users can add memes, react to memes, follow or unfollow another user, react to memes, as well as save memes for future viewing.
+This is the backend API for the MewMes Frontend React app and it contains the models and logic to allow the frontend application to perform CRUD operations.
+
+MewMes is a content-sharing platform designed for cat memes appreciators: users can sign up, share their favourite cat memes, save and react to memes, as well as follow or unfollow other users.
 
 - [MewMes Deployed Back-End Page](https://mewmes-dc42376a8874.herokuapp.com/)
 - [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
@@ -13,20 +13,34 @@ The app includes registration and sign-up, users can add memes, react to memes, 
     
   - [Table of Contents](#table-of-contents)
   - [Database Schema](#database-schema)
+  - [API Endpoints](#api-endpoints)
   - [User Stories](#user-stories)
   - [Testing](#testing)
     - [Unit Testing](#unit-testing)
-      - [Posts List View testing:](#posts-list-view-testing)
-      - [Posts Detail View testing:](#posts-detail-view-testing)
-    - [Code Validation](#validation)
+      - [Posts List View testing](#posts-list-view-testing)
+      - [Posts Detail View testing](#posts-detail-view-testing)
+    - [Code Validation](#code-validation)
     - [Manual Testing](#manual-testing)
-      - [Testing CRUD functionality:](#testing-crud-functionality)
+    - [Test Cases](#test-cases)
       - [Testing URLs](#testing-urls)
+      - [Testing CRUD functionality](#testing-CRUD-functionality)
+      - [Testing with Admin credentials](#testing-with-admin-credentials)
+    - [Integration Testing](#integration-testing)
   - [Technologies Used](#technologies-used)
-    - [Languages](#languages)
-    - [Libraries, Frameworks, and Programs](#libraries-frameworks-and-programs)
+    - [Main Languages](#main-languages)
+    - [Database](#database)
+    - [Cloud storage and deployment services](#cloud-storage-and-deployment-services)
+    - [Frameworks, tools and libraries](#frameworks-tools-and-libraries)
+        - [API Back-End](#api-backend)
+    - [Installed libraries and packages](#installed-libraries-and-packages)
   - [Bugs](#bugs)
     - [Unresolved](#unresolved)
+  - [Project Setup](#project-setup)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+     - [Sources](#sources)
+     - [Media](#media)
+     - [Acknowledgments](#acknowledgments)
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -102,6 +116,7 @@ All Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp.com
 - The API endpoints were also checked in the deployed site to see if they were working and checked throughout the frontend development to ensure front and backend integration as each feature was being built in the React app.
 
 ### **Test cases**
+
 Below are some test cases that were implemented throughout development to check correct functionality: 
 - Check login, logout and registration functionality.
 - Check that access to memes, reply, profiles, followers, votes and downvotes POST, PUT and DELETE Metods are restricted to authorised users. 
@@ -113,7 +128,7 @@ Below are some test cases that were implemented throughout development to check 
 - PUT mehtod for profiles/id, posts/id and reply/id tested
 - DELETE method for posts/id, reply/id, saved/id, votes/id, downvotes/id, followers/id tested
 
-#### **Testing CRUD functionality throughout the apps:**
+### **Testing CRUD functionality**
 
 | App | Create | Read | Update | Delete |
 |---|---|---|---|---|
@@ -124,7 +139,7 @@ Below are some test cases that were implemented throughout development to check 
 | Votes | Pass | Pass | n/a | Pass |
 | Downvotes | Pass | Pass| n/a | Pass|
 
-#### **Testing URLs**
+### **Testing URLs**
 
 | **URL** | **Result** |
 | --- | --- |
@@ -145,7 +160,7 @@ Below are some test cases that were implemented throughout development to check 
 | /downvotes/ | Pass |
 | /downvotes/:id/ | Pass |
 
-#### **Testing with Admin credentials**
+### **Testing with Admin credentials**
 
 <details><summary>Profiles</summary>
 <img src="static/images-readme/admin_profiles.png" >
@@ -176,6 +191,7 @@ Below are some test cases that were implemented throughout development to check 
 </details>
 
 ### **Integration Testing**
+
 The MewMes API has also gone through integration testing via testing the features on the frontend site. 
 - The Testing documentation can be found [here](https://github.com/Ila-bura/mewmes/blob/main/README.md#testing).
 - Bugs encountered during this process were frontend bugs. See more details [here](https://github.com/Ila-bura/mewmes/blob/main/README.md#bugs).
@@ -192,10 +208,12 @@ The MewMes API has also gone through integration testing via testing the feature
 
 - [JS](https://reactjs.org/)
 
-### **Databases**
+### **Database**
+
 - [PostgreSQL](https://www.postgresql.org/)
-- 
+
 ### **Cloud storage and deployment services**
+
 - [Cloudinary](https://cloudinary.com/)
     - Used to store media files and images.
 - [Heroku](https://www.heroku.com/)
@@ -204,7 +222,9 @@ The MewMes API has also gone through integration testing via testing the feature
    - Used to host and operate the PostgresSQL database
 
 ### **Frameworks, tools and libraries**
+
 #### API Back-End
+
 - [Django Rest Framework](https://www.django-rest-framework.org/)
     - The frmaework used to build the api
 - [Psycopg2](https://pypi.org/project/psycopg2/)
@@ -228,6 +248,7 @@ The MewMes API has also gone through integration testing via testing the feature
 - [dbdiagram.io](https://dbdiagram.io/home): for the database schema diagram.
 
 ### **Installed Libraries and packages**
+
 The following libraries and packages were installed using the pip3 install command:
 ```
 'django<4'
@@ -244,7 +265,9 @@ django-cors-headers
 ```
 
 ## **Bugs**
+
 ### **Unresolved**
+
 None to my knowledge as of now.
 
 ## **Project Setup**
@@ -633,6 +656,7 @@ The first step of deployment is setting up the JWT tokens:
 4. A copy of the repo will be available in your GitHub repositories list
 
 #### **Steps to clone the repository**
+
 1. Log in to GitHub.
 2. Go to the repository [MewMes_API](https://github.com/Ila-bura/MewMes_API).
 3. Click on the green code button next to the green gitpod button.
@@ -649,10 +673,10 @@ The first step of deployment is setting up the JWT tokens:
 This project is a variation and largely based on the [Code Institute Moments](https://github.com/Code-Institute-Solutions/drf-api/tree/ed54af9450e64d71bc4ecf16af0c35d00829a106) walkthrough project.
 It contains models and logic from that project which have bee modified for the purpose of MewMes cat memes sharing app.
 
-### **Acknowledgments**
-
-- My mentor at Code Institute - Martina Terlevic.
-
 ### **Media**
 
 - The two images used for the default profile and the default post were dowloaded from the CI walkthrough and uploaded on Cloudinary.
+
+### **Acknowledgments**
+
+- My mentor at Code Institute - Martina Terlevic.
