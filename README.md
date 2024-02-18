@@ -1,8 +1,12 @@
-# **MewMes - API**
+# MewMes - API
 
 This is the backend API for the MewMes Frontend React app and it contains the models and logic to allow the frontend application to perform CRUD operations.
 
 MewMes is a content-sharing platform designed for cat memes appreciators: users can sign up, share their favourite cat memes, save and react to memes, as well as follow or unfollow other users.
+
+#
+
+![rendered-api](static/images-readme/rendered-api.png)
 
 - [MewMes Deployed Back-End Page](https://mewmes-dc42376a8874.herokuapp.com/)
 - [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
