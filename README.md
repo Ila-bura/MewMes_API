@@ -10,7 +10,7 @@ MewMes is a content-sharing platform designed for cat memes appreciators: users 
 
 - [MewMes Deployed Back-End Page](https://mewmes-dc42376a8874.herokuapp.com/)
 - [MewMes Deployed Front-End Page](https://mewmes-ila-3228af34fcea.herokuapp.com/)
-- [Front-End repository](https://github.com/Ila-bura/MewMes_API)
+- [Front-End repository](https://github.com/Ila-bura/mewmes)
 
 
 ## **Table of Contents** ##
