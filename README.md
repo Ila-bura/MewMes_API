@@ -111,7 +111,9 @@ The command *python manage.py test* was used. All tests passed.
 - The only issues left unfixed from the problems tab are the line too long warnings from the automatically generated settings.py AUTH_PASSWORD_VALIDATORS variable which contains long strings. 
 These strings were left intact rather than breaking them up into smaller strings for the sake of avoiding potential issues. This seems to be the general consensus by reseraching the matter on the Code Institute Slack channels.
 
-![screenshot](static/images-readme/longstrings.png)
+<details><summary>Long Strings Issue</summary>
+<img src="static/images-readme/longstrings.png" >
+</details>
 
 
 ### **Manual Testing**
