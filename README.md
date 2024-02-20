@@ -107,11 +107,12 @@ The command *python manage.py test* was used. All tests passed.
 ### **Code Validation**
 
 - The Python code was monitored for errors and adjusted throughout development using the gitpod IDE problems tab.
-- All Python files were opened one by one and any problems were manually corrected: mainly minor issues such as blank line at end of file.
+- All Python files were opened one by one and checked with [PEP8 Code Institute](https://pep8ci.herokuapp.com/). Any problems were manually corrected: mainly minor issues such as blank line at end of file.
 - The only issues left unfixed from the problems tab are the line too long warnings from the automatically generated settings.py AUTH_PASSWORD_VALIDATORS variable which contains long strings. 
 These strings were left intact rather than breaking them up into smaller strings for the sake of avoiding potential issues. This seems to be the general consensus by reseraching the matter on the Code Institute Slack channels.
 
-All Python files pass through [PEP8 Code Institute](https://pep8ci.herokuapp.com/) with no issues found.
+![screenshot](static/images-readme/longstrings.png)
+
 
 ### **Manual Testing**
 
